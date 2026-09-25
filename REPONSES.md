@@ -1,8 +1,8 @@
 # Réponses aux questions du TP01 - Premiers scripts Bash
 
-**Nom :** [Votre nom]
-**Classe :** [Votre classe]
-**Date :** [Date]
+**Nom :** [Flament Matthieu]
+**Classe :** [BTS CIEL IR 2]
+**Date :** [25/09/26]
 
 ---
 
@@ -11,13 +11,16 @@
 ### Question 1 : Validation d'entrée
 **Comment vérifier que l'utilisateur a bien entré un nombre ?**
 
+
 Votre réponse :
+utiliser un if pour voir si c'est un nombre entier
 ```
 [Expliquez ici votre méthode de validation]
 ```
 
 ### Question 2 : Boucle
 **Quelle structure de boucle est la plus appropriée (for, while) ? Pourquoi ?**
+C'est for car on connait à l'avance le nombre de tour de i
 
 Votre réponse :
 ```
@@ -27,7 +30,10 @@ Votre réponse :
 ### Question 3 : Extension
 **Comment pourriez-vous permettre à l'utilisateur de choisir jusqu'à quel multiplicateur aller ?**
 
+
 Votre réponse :
+le nombre de fois que i va tourner dans la boucle ,ici c'est de 1 à 10 mais on peut augmenter
+
 ```
 [Décrivez votre approche]
 ```
