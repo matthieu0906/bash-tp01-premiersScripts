@@ -9,25 +9,28 @@
 ################################################################################
 
 # TODO: Vérifier que 2 paramètres sont fournis 
-if [ $# -eq 2 ]; then
+if [ $# -eq 3 ]; then
     min=$1
     max=$2
+    niveau=$3
 else
     echo "Rentrez le premier nombre (min) :"
     read min 
     echo "Rentrez le second nombre (max) :"
     read max 
+    echo "Rentrez la difficulté : "
+    read niveau
 fi
 
 # TODO: Valider que les paramètres sont des nombres entiers
 if ! [[ "$min" =~ ^-?[0-9]+$ ]] || ! [[ "$max" =~ ^-?[0-9]+$ ]]; then
-    echo "Erreur : vous devez saisir deux nombres entiers valides." >&2
+    echo "Erreur : vous devez saisir deux nombres entiers valides." 
     exit 1
 fi
 
 # TODO: Valider que min < max
 if [ $min -ge $max ]; then 
-    echo "Erreur : min ($min) doit être strictement inférieur à max ($max)." >&2
+    echo "Erreur : min ($min) doit être strictement inférieur à max ($max)." 
     exit 1
 fi    
 
@@ -45,7 +48,7 @@ victoire=0
 while [ $i -le $essaismax ]; do 
     echo "Essai $i/$essaismax - Entrez votre nombre :"
     read nombrejoueur
-    
+
     if ! [[ "$nombrejoueur" =~ ^-?[0-9]+$ ]]; then
         echo "Veuillez entrer un nombre entier valide."
         continue
@@ -55,12 +58,12 @@ while [ $i -le $essaismax ]; do
         echo "Trop petit !"
     elif [ $nombrejoueur -gt $nombre ]; then
         echo "Trop grand !"
+        # TODO: Affichez le message de fin victoire ou défaite :
     else
         echo "Bravo ! Vous avez trouvé le nombre $nombre en $i essai(s) !"
         victoire=1
         break
     fi
-
     i=$((i + 1))
 done
 
