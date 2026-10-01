@@ -12,7 +12,7 @@
 ################################################################################
 
 # TODO: Vérifier qu'un dossier est fourni en paramètre
-
+salut
 
 # TODO: Vérifier que le dossier existe
 
