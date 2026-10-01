@@ -45,17 +45,20 @@ le nombre de fois que i va tourner dans la boucle ,ici c'est de 1 à 10 mais on 
 ### Question 1 : Gestion des paramètres
 **Que se passe-t-il si l'utilisateur ne fournit pas exactement 2 paramètres ? Comment gérer ce cas ?**
 
+
 Votre réponse :
+if [ $# -eq 2 ]; then 
+lui demander de rentrer min et max
 ```
 [Expliquez la gestion des paramètres]
 ```
 
 ### Question 2 : Validation
 **Comment vérifier que le premier paramètre est bien inférieur au second ?**
-if [ $min -ge $max ]; then 
+
 
 Votre réponse :
-```
+`if [ $min -ge $max ]; then ``
 [Décrivez votre validation]
 ```
 
@@ -63,6 +66,14 @@ Votre réponse :
 **Expliquez comment vous gérez le décompte des essais restants.**
 
 Votre réponse :
+essaismax=5
+i=1
+victoire=0
+
+# TODO: Boucle de jeu
+while [ $i -le $essaismax ]; do 
+
+i=$((i + 1))
 ```
 [Expliquez votre logique de compteur]
 ```
@@ -70,10 +81,11 @@ Votre réponse :
 ### Question 4 : Comparaisons
 **Quelle syntaxe utilisez-vous pour comparer des nombres en Bash ?**
 
+
 Votre réponse :
 ```
 [Donnez des exemples de syntaxe]
-```
+```-lt ou -gt ou -eq
 
 ---
 
