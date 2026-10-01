@@ -52,6 +52,7 @@ Votre réponse :
 
 ### Question 2 : Validation
 **Comment vérifier que le premier paramètre est bien inférieur au second ?**
+if [ $min -ge $max ]; then 
 
 Votre réponse :
 ```
