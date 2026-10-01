@@ -9,17 +9,16 @@
 ################################################################################
 
 # TODO: Vérifier que 2 paramètres sont fournis 
-if [ $# -eq 3 ]; then
+if [ $# -eq 2 ]; then
     min=$1
     max=$2
-    niveau=$3
+
 else
     echo "Rentrez le premier nombre (min) :"
     read min 
     echo "Rentrez le second nombre (max) :"
     read max 
-    echo "Rentrez la difficulté : "
-    read niveau
+
 fi
 
 # TODO: Valider que les paramètres sont des nombres entiers
